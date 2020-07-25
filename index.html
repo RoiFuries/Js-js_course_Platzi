@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Media Player</title>
     <link
       rel="stylesheet"
       href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
@@ -28,9 +28,30 @@
 
     <script>
         const video = document.querySelector("video")
-        const button = document.querySelector("button")
+        const button = document.querySelector("button") // que pasa si en el html tengo mas de un video o un button
 
-        button.onclick = () => video.play();
+        function MediaPlayer(config){
+            this.media = config.el;
+        };
+
+        MediaPlayer.prototype.play = function (){
+            this.media.play();
+        };
+        MediaPlayer.prototype.pause = function (){
+            this.media.pause();
+        };
+
+        MediaPlayer.prototype.actionButton = function() {
+            if (this.media.paused) {
+             this.play();
+            } else {
+                 this.pause();
+            }
+      };
+
+
+        const player = new MediaPlayer({el: video});
+        button.onclick = () => player.actionButton();
 
     </script>
     
