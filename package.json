@@ -1,0 +1,26 @@
+{
+  "name": "Js-profesional",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RoiFuries/Js-js_course_Platzi.git"
+  },
+  "keywords": [
+    "platzi"
+  ],
+  "author": "RoiFuries roi.furies@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RoiFuries/Js-js_course_Platzi/issues"
+  },
+  "homepage": "https://github.com/RoiFuries/Js-js_course_Platzi#readme",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
